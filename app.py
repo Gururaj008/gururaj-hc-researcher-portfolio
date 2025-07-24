@@ -224,6 +224,9 @@ def render_data_science_projects_page():
                         st.markdown(
                             f"🔗 <a href='{row['GitHub repo link']}' class='github-link' target='_blank'>View on GitHub</a>",
                             unsafe_allow_html=True)
+        st.markdown("---")
+        st.markdown("For a more extensive archive of my earlier projects, please visit my [secondary portfolio](https://gururaj-hc-personal-webpage.streamlit.app/).")
+        
     except FileNotFoundError:
         st.error("File 'Data_Science_projects.xlsx' not found.")
     except Exception as e:
