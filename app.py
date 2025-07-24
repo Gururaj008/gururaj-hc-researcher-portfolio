@@ -236,7 +236,7 @@ def render_data_science_projects_page():
 def render_pre_prints_page():
     render_custom_subheader("Pre-prints")
     try:
-        df = pd.read_excel("pre_prints.xlsx", sheet_name="Pre-prints")
+        df = pd.read_excel("Pre_prints.xlsx", sheet_name="Pre-prints")
         required_cols = ['Title', 'Abstract', 'Available at']
         if not all(col in df.columns for col in required_cols):
             st.error(f"pre_prints.xlsx must contain the columns: {', '.join(required_cols)}")
